@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+::selection{
+    background: #4158d0;
+    color: #fff;
+}
+
+.header {
+    position:fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #262626;
+    color:white;
+}
+
+.container {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0px 25px;
+    float: left;
+}
+  
+.header__title {
+    margin-bottom: 0px;
+}
+  
+.header__subtitle {
+    margin-top: 0px;
+    font-size: 20px;
+}
+
+.webtitle {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.ewx {
+    float: left;
+    color:#f26722;
+}
+
+.retro {
+    float: left;
+    color: white;  
+}
+
+.button-container {
+    float: right;
+    padding: 0px 50px;
+}
+
+.button {
+    background-color: white;
+    color: #262626;
+    cursor: pointer;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 12px 36px;
+    border: none;
+    outline: none;
+    transition: 0.2s all;
+}
+
+.button:hover {
+    background-color: #f26722;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+  
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+  
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: "\2212";
+}
+  
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow-x: auto;
+    transition: max-height 0.2s ease-out;
+}
+
+.tableTitle {
+    background: #262626;
+    color:white;
+    padding: 10px;
+    margin: 0px;
+}
+
+#table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+#table td, #table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+#table tr:nth-child(even){background-color: #f2f2f2;}
+  
+#table tr:hover {background-color: #ddd;}
+  
+#table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #f26722;
+    color: white;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #262626;
+    color: white;
+    text-align: center;
+ }
+

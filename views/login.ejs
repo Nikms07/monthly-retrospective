@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Login|Retrospective</title>
+        <link href="favicon_io/favicon-16x16.png?v=1" rel="icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+        <link rel="stylesheet" href="styles/login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <% if (result != '' && message != '') { %>
+            <div class="alert" id="waa">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                <strong><%=result%></strong> <%=message%>
+            </div> <% } %>
+
+        <div class="header">
+            <h1 class="ewx">EWX|</h1>
+            <h1 class="retro">Retrospective</h1>
+        </div>
+        <div class="wrapper">
+            <div class="title">Account Login</div>
+        <form action="login" method="POST">
+            <div class="field">
+                <input type="text" name="emp_id" required>
+                <label>Employee ID</label>
+            </div>
+            <div class="field">
+                <input type="password" id="show" name="password" required>
+                <label>Password</label>
+            </div>
+            <div class="content">
+                <div class="checkbox">
+                  <input type="checkbox" onclick="togglePassword()">
+                  <label for="show-password">Show Password</label>
+                </div>
+            </div>
+            <div class="field">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+        </div>
+        <div>
+            <b>* In case you have forgotten your Employee ID and/or Password, Ask your administrator for help.</b> 
+        </div>
+
+        <script src="scripts/login.js"></script>
+    </body>
+</html>

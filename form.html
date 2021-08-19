@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form | Retrospective</title>
+    <link href="favicon_io/favicon-16x16.png?v=1" rel="icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/select.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<form id="regForm" action="/retro_submit" method="POST" onkeypress="return !(event.key == 'Enter' && event.target.tagName != 'TEXTAREA')">
+  <h1>Monthly Retrospective</h1>
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab">Select Month-Year :
+    <hr>
+    <p><input name="name" id="uname" readonly></p>
+    <p><input name="emp_id" id="uid" readonly></p>
+    <p><input type="month" name="month_year" id="month_year" onkeypress="return false" required></p>
+  </div>
+  <div class="tab">Tasks i have completed :
+    <hr>
+   	<div class="completed-tasks"></div>
+   	<div style="overflow:auto;">
+    	<div style="float:left; margin-top:10px;">
+      	<button type="button" id="addtask">Add Task</button>
+      	<button type="button" id="removetask">Remove Task</button>
+    	</div>
+  	</div>
+  </div>
+  <div class="tab">Defaulted Tasks :
+    <hr>
+    <div class="defaulted-tasks"></div>
+   	<div style="overflow:auto;">
+    	<div style="float:left; margin-top:10px;">
+      	<button type="button" id="addDtask">Add Task</button>
+      	<button type="button" id="removeDtask">Remove Task</button>
+    	</div>
+  	</div>
+  </div>
+  <div class="tab"> My Overall Performance was :
+    <hr>
+    <p><select name="myperformance" required>
+      <option selected disabled>Select Overall Performance...</option>
+      <option value="Unsatisfactory">Unsatisfactory</option>
+      <option value="Somewhat Satisfactory">Somewhat Satisfactory</option>
+      <option value="Satisfactory">Satisfactory</option>
+      <option value="Very Satisfactory">Very Satisfactory</option>
+      <option value="Exceptional">Exceptional</option>
+    </select></p>
+    <p><textarea name="improvedskills" placeholder="Improved Skills..." required></textarea></p>
+    <p><textarea name="hindrances" placeholder="Hindrances..." required></textarea></p>
+    <p><textarea name="opportunities" placeholder="Opportunities..." required></textarea></p>
+    <p><textarea name="uncertainties" placeholder="Uncertainties..." required></textarea></p>
+  </div>
+  <div class="tab">Things i liked or didn't like about my colleagues :
+    <hr>
+    <div class="colleagues"></div>
+    <div style="overflow:auto;">
+    	<div style="float:left; margin-top:10px;">
+      	<button type="button" id="addcolleague">Add Colleague</button>
+      	<button type="button" id="removecolleague">Remove Colleague</button>
+    	</div>
+  	</div>
+  </div>
+  <div class="tab">Things i liked or didn't like about my workplace :
+    <hr>
+    <div class="issues"></div>
+    <div style="overflow:auto;">
+    	<div style="float:left; margin-top:10px;">
+      	<button type="button" id="addissue">Add Area/Issue</button>
+      	<button type="button" id="removeissue">Remove Area/Issue</button>
+    	</div>
+  	</div>
+    <p><input type="submit"></p>
+  </div>
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+  </div>
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+  </div>
+</form>
+
+<script src="scripts/form.js"></script>
+<script src="scripts/select.js"></script>
+
+</body>
+</html>
+

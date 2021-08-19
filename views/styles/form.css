@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  body {
+    background-color: #f1f1f1;
+  }
+  
+  #regForm {
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+  }
+  
+  h1 {
+    text-align: center;  
+  }
+  
+  input, textarea {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    border: 1px solid #aaaaaa;
+  }
+
+  select {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+  }
+  
+  textarea {
+    resize: none;
+  }
+
+  /* Mark input boxes that gets an error on validation: */
+  .invalid {
+    background-color: #ffdddd;
+  }
+  
+  /* Hide all steps by default: */
+  .tab {
+    display: none;
+  }
+
+  hr {
+    border-top: 1px solid #f26722;
+  }
+  
+  button {
+    background-color: #f26722;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  #prevBtn, #removetask, #removeDtask, #removecolleague, #removeissue {
+    background-color: #bbbbbb;
+  }
+  
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  .step.active {
+    opacity: 1;
+  }
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #f26722;
+  }
+
+  input[type="submit"]{
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    background: #262626;
+    transition: all 0.3s ease;
+  }
+  
+  input[type="submit"]:active{
+    transform: scale(0.95);
+  }
+  
+  input[type="submit"]:hover {
+      background: #f26722;
+  }

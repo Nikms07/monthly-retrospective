@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title><%=result%>|Retrospective</title>
+        <link href="favicon_io/favicon-16x16.png?v=1" rel="icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            .alert {
+                padding: 20px;
+                color: white
+            }
+
+            .closebtn {
+                margin-left: 15px;
+                color: white;
+                font-weight: bold;
+                float: right;
+                font-size: 22px;
+                line-height: 20px;
+                cursor: pointer;
+                transition: 0.3s
+            }
+
+            .closebtn:hover {
+                color: black
+            }
+        </style>
+    </head>
+
+    <body>
+        <% if (result != '' && message != '') { %>
+            <div class="alert" id="waa">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                <strong><%=result%>!</strong> <%=message%>
+            </div> <% } %>
+        <br>
+        <p><h3>Redirecting to Home...</h3></p>
+            
+        <script type="text/javascript">
+
+            const result = '<%-result%>'
+            const message = '<%-message%>'
+
+            document.getElementById('waa').style.backgroundColor = (result === 'Success') ? 'green' : '#f44336'
+
+            setTimeout(function(){
+                location.replace('/user_home')
+            }, 4000)
+
+        </script>
+    </body>
+</html>

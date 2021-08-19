@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title><%=employee.name%> | Home</title>
+        <link href="favicon_io/favicon-16x16.png?v=1" rel="icon">
+        <link rel="stylesheet" href="styles/userHome.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="header">
+            <div class="webtitle container">
+                <h1 class="ewx">EWX|</h1>
+                <h1 class="retro">Retrospective</h1>
+            </div>
+            <div class="container">
+                <h1 class="header__title"><%=employee.name%></h1>
+                <h2 class="header__subtitle"><%=employee.user_type%>,<span>&nbsp;&nbsp;</span>Id: <%=employee.emp_id%></h2>
+            </div>
+            <div class="container">
+                <h1 class="header__title">Joined On: <%=employee.join_date%></h1>
+                <% if (employee.left_date) { %>
+                <h2 class="header__subtitle">Left On: <%=employee.left_date%></h2>
+                <% } %>
+            </div>
+            <div class="button-container">
+                <h1><button class="button" onclick="window.location.href='/logout';">Logout</button></h1>
+            </div>
+            <div class="button-container">
+                <h1><button class="button" onclick="window.location.href='/retro_form';">Fill Retrospective</button></h1>
+            </div>
+        </div>
+        <div class="filled-retros"></div>
+        <div class="footer">
+            <p>EWX | Retrospective &copy;</p>
+        </div>
+
+        <script src="scripts/userHome.js"></script>
+    </body>
+</html>
